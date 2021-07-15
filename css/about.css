@@ -1,0 +1,298 @@
+                            * {
+                                margin: 0;
+                                padding: 0;
+                                -webkit-box-sizing: border-box;
+                                box-sizing: border-box;
+                            }
+                            
+                            html {
+                                scroll-behavior: smooth;
+                            }
+                            
+                            body {
+                                width: 100vw;
+                                height: 300vh;
+                                background: #FEF9EF;
+                                overflow-x: hidden;
+                            }
+                            
+                            .con-text {
+                                width: 100vw;
+                                height: 20vh;
+                                background: transparent;
+                                display: -webkit-box;
+                                display: -ms-flexbox;
+                                display: flex;
+                                -webkit-box-orient: vertical;
+                                -webkit-box-direction: normal;
+                                -ms-flex-direction: column;
+                                flex-direction: column;
+                                -webkit-box-align: center;
+                                -ms-flex-align: center;
+                                align-items: center;
+                                -webkit-box-pack: center;
+                                -ms-flex-pack: center;
+                                justify-content: center;
+                                text-align: center;
+                                position: absolute;
+                            }
+                            
+                            .con-text h1 {
+                                font-weight: bolder;
+                                text-transform: uppercase;
+                                font-size: 50px;
+                                line-height: 109%;
+                                letter-spacing: 0.2em;
+                            }
+                            
+                            .con-img {
+                                width: inherit;
+                                height: 100vh;
+                                display: -ms-grid;
+                                display: grid;
+                                -ms-grid-columns: 50% 50%;
+                                grid-template-columns: 65% 35%;
+                            }
+                            
+                            .con-img .left {
+                                width: 100%;
+                                display: -webkit-box;
+                                display: -ms-flexbox;
+                                display: flex;
+                                -webkit-box-align: center;
+                                -ms-flex-align: center;
+                                align-items: center;
+                                -webkit-box-pack: center;
+                                -ms-flex-pack: center;
+                                justify-content: center;
+                            }
+                            
+                            .con-img .left .bottom {
+                                z-index: -1;
+                                transform: translateX(40%);
+                            }
+                            
+                            .con-img .left .top {
+                                transform: translate3d(100px, 450px, 0);
+                            }
+                            
+                            .descript {
+                                width: 50%;
+                                border-top: 1px solid black;
+                                padding-top: 20px;
+                                transform: translateX(-150px);
+                                font-size: 20px;
+                                font-family: serif;
+                            }
+                            
+                            .nothing {
+                                height: 40%;
+                            }
+                            
+                            .con-text_2 {
+                                width: 100vw;
+                                height: 120vh;
+                                display: grid;
+                                grid-template-columns: 5% 90% 5%;
+                            }
+                            
+                            .no {
+                                width: 100%;
+                                height: 100%;
+                            }
+                            
+                            .con-word {
+                                width: 100%;
+                                height: 50%;
+                                align-self: center;
+                                display: flex;
+                                flex-flow: column;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            
+                            .con-word .line1 {
+                                font-size: 7em;
+                                font-family: sans-serif;
+                                text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+                            }
+                            
+                            .con-word .line1 .word {
+                                display: inline-block;
+                            }
+                            
+                            .con-word .line1 span {
+                                overflow: hidden;
+                                animation: b 10s linear infinite;
+                                opacity: 0
+                            }
+                            
+                            .line2 {
+                                font-size: 6em;
+                                font-family: sans-serif;
+                                text-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+                            }
+                            
+                            .line2 span {
+                                overflow: hidden;
+                                animation: a 10s linear infinite;
+                                opacity: 0
+                            }
+                            
+                            @keyframes a {
+                                0% {
+                                    opacity: 0;
+                                    transform: translateY(-50px);
+                                }
+                                2% {
+                                    opacity: 1;
+                                    transform: translateY(0px);
+                                }
+                                25% {
+                                    opacity: 1;
+                                }
+                                30% {
+                                    opacity: 0;
+                                }
+                                100% {
+                                    opacity: 0;
+                                    transform: translateY(50px);
+                                }
+                            }
+                            
+                            .line1 .word span:nth-child(1) {
+                                animation-delay: 0s;
+                            }
+                            
+                            .line1 .word span:nth-child(2) {
+                                animation-delay: 5s;
+                            }
+                            
+                            @keyframes b {
+                                0% {
+                                    opacity: 0;
+                                }
+                                1% {
+                                    opacity: 1;
+                                }
+                                45% {
+                                    opacity: 1
+                                }
+                                50% {
+                                    opacity: 0;
+                                }
+                                100% {
+                                    opacity: 0;
+                                }
+                            }
+                            
+                            @keyframes c {
+                                0% {
+                                    opacity: 0;
+                                }
+                                29% {
+                                    opacity: 0;
+                                }
+                                30% {
+                                    opacity: 1
+                                }
+                                69% {
+                                    opacity: 1
+                                }
+                                70% {
+                                    opacity: 0;
+                                }
+                                100% {
+                                    opacity: 0;
+                                }
+                            }
+                            
+                            .line2 .word span:nth-child(1) {
+                                animation-delay: 0s;
+                            }
+                            
+                            .line2 .word span:nth-child(2) {
+                                animation: c 10s infinite;
+                            }
+                            
+                            .line2 .word span:nth-child(3) {
+                                animation-delay: 7s;
+                            }
+                            
+                            .no img {
+                                position: absolute;
+                                transform: translateX(-500px);
+                                z-index: -1;
+                            }
+                            /*  */
+                            
+                            .con-text_3 {
+                                width: 100vw;
+                                height: 100vh;
+                                display: grid;
+                                grid-template-rows: 15% 85%;
+                                background-repeat:  no-repeat;
+                                background-position-x: 110%;
+                            }
+                            
+                            .banner {
+                                width: 100vw;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                font-size: 3em;
+                                animation: 10s d infinite linear;
+                            }
+                            
+                            @keyframes d {
+                                0% {
+                                    transform: translateX(0px);
+                                }
+                                0% {
+                                    transform: translateX(-100%);
+                                }
+                            }
+                            
+                            .con-text_3 .infoo {
+                                width: 50%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                            }
+                            
+                            .infoo .text {
+                                width: 25%;
+                                font-size: 20px;
+                                font-family: serif;
+                            }
+                            
+                            .bot {
+                                display: flex;
+                                flex-flow: row;
+                            }
+                            
+                            .image {
+                                width: 50%;
+                                height: 100%;
+                            }
+                            
+                            .image img:nth-child(1) {
+                                z-index: 2;
+                                transform: translate3d(80%, 40%, 0);
+                            }
+                            
+                            .image img:nth-child(2) {
+                                z-index: -1;
+                                transform: translate3d(-100%, 100%, 0);
+                            }
+                            
+                            .back {
+                                position: fixed;
+                                bottom: 0;
+                                right: 0;
+                                z-index: 999;
+                            }
+                            /*
+
+                             */

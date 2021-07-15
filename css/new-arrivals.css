@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow-x: hidden;
+}
+
+.container .content {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+
+/*  */
+
+.content:nth-child(1) h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 10vw;
+    text-align: center;
+    color: white;
+    background: black;
+    mix-blend-mode: multiply;
+}
+
+.content:nth-child(1) video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow-x: hidden;
+}
+
+
+/*  */
+
+.content:nth-child(1) h2 span {
+    font-size: 0.4em;
+}
+
+
+/*  */
+
+.ni {
+    margin: 0 0 0 5%;
+    width: 90%;
+    height: 150vh;
+    background: #f2e3ca;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10%;
+}
+
+.pic {
+    width: 30%;
+    height: 29%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic .inner {
+    width: 90%;
+    height: 90%;
+    background: #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic .inner img {
+    width: 60%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+.ni h2 {
+    position: absolute;
+    color: #c98083;
+    font-size: 16vw;
+    display: flex;
+    font-family: 'Ubuntu';
+}
+
+.ni .top {
+    transform: translateY(-10%);
+}
+
+.ni .bot {
+    transform: translateY(150%);
+}
+
+.goshop {
+    position: absolute;
+    display: block;
+    width: 30%;
+    height: 20%;
+    margin: 0;
+    transform: translateY(560%);
+    z-index: 1;
+}
+
+.goshop button {
+    width: 100%;
+    height: 50%;
+    color: white;
+    background: black;
+}
+
+
+/*  */

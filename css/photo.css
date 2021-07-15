@@ -1,0 +1,53 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .ni {
+        margin: 0 0 0 5%;
+        width: 90%;
+        height: 150vh;
+        background: #f2e3ca;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10%;
+    }
+    
+    .pic {
+        width: 30%;
+        height: 29%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0, 0, 0, 0.5;
+    }
+    
+    .pic .inner {
+        width: 90%;
+        height: 90%;
+        background: #EAEAEA;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+    .ni h2 {
+        position: absolute;
+        color: #c98083;
+        font-size: 15vw;
+        display: flex;
+    }
+    
+    .ni .top {
+        top: -8%;
+        transform: rotateY(20deg);
+    }
+    
+    .ni .bot {
+        bottom: -10%;
+    }

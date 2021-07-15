@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header.css">
+</head>
+
+<body>
+    <div class="container-header">
+        <div class="menu-button">
+            <div class="menu-toggle">
+                <a class="icon" href="#"></a>
+                <a class="icon" href="#"></a>
+                <a class="icon" href="#"></a>
+                <a class="icon" href="#"></a>
+            </div>
+        </div>
+    </div>
+    <div class="sho">
+        <div class="menu-wrap">
+            <div class="colum"></div>
+            <div class="colum"></div>
+            <div class="colum"></div>
+            <div class="colum"></div>
+            <div class="colum"></div>
+            <div class="colum"></div>
+            <div class="colum"></div>
+            <div class="colum"></div>
+        </div>
+        <div class="bg">
+            <div class="colum1" id="menu">
+                <div class="container-menu">
+                    <ul class="menu1">
+                        <a href="#">
+                            <li>HOME</li>
+                        </a>
+                        <a href="#">
+                            <li>NEW ARRIVALS</li>
+                        </a>
+                        <a href="#">
+                            <li>SPECIAL OFFERS</li>
+                        </a>
+                        <a href="">
+                            <li>ABOUT US</li>
+                        </a>
+
+                        <a href="#">
+                            <li>CONTACT</li>
+                        </a>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <span style=" position:absolute; top:50%;
+        left:50%;
+        ">hello</span>
+</body>
+<script>
+    var a = document.querySelector(".menu-button");
+    var b = document.querySelector(".menu-toggle");
+    var c = document.querySelector(".menu-wrap");
+    var d = document.querySelector(".bg")
+    a.onclick = function() {
+        b.classList.toggle('change')
+        c.classList.toggle('show')
+        d.classList.toggle('show')
+    }
+</script>
+
+</html>

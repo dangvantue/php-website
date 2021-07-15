@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="/css/products.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="a"></div>
+        <div class="b">
+            <h6>product</h6>
+            <h2>Everything</h2>
+            <div class="filtering">
+                <form action="" class="search-bar">
+                    <input type="search" name="search" pattern=".*\S.*" required>
+                    <button class="search-btn" type="submit">
+                    <span>Search</span>
+                </button>
+                </form>
+                <h6 id="filterr">Filter</h6>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-product">
+        <div class="card-product" data-modal="m1">
+            <div class="image">
+                <img src="/img/Amethyst/geode.png" width="50%" alt="">
+            </div>
+            <div class="info-product">
+                <h3 class="type">Geode</h3>
+                <h4 class="name">Amethyst Geode</h4>
+                <span>$15</span>
+            </div>
+
+        </div>
+        <div class="modal" id="m1">
+            <div class="modal-content">
+                <div class="x"> <span id="closeBT">&times</span></div>
+
+                <section class="product">
+                    <div class="product__photo">
+                        <div class="photo-container">
+                            <div class="photo-main">
+                                <img src="/img/Amethyst/geode.png" width="50%" alt="green apple slice">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__info">
+
+                        <div class="title">
+                            <h1>Delicious Apples</h1>
+                            <span>Stock: 1</span>
+                        </div>
+                        <div class="price">
+                            $ <span>7.93</span>
+                        </div>
+
+                        <div class="description">
+                            <h3>Lore</h3>
+                            <p>Lorem2</p>
+                        </div>
+                        <a href="/img/Amethyst/down.docx" download><button class="buy--btn">Read More</button></a>
+                        <button class="buy--btn">Compare</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="card-product" data-modal="m2">
+            <div class="image">
+                <img src="/img/Amethyst/geode.png" width="50%" alt="">
+            </div>
+            <div class="info-product">
+                <h3 class="type">Geode</h3>
+                <h4 class="name">Amethyst Geode</h4>
+                <span>$15</span>
+            </div>
+            <div class="modal" id="m2">
+                <div class="modal-content">
+                    <div class="x"> <span id="closeBT">&times</span></div>
+                    <section class="product">
+                        <div class="product__photo">
+                            <div class="photo-container">
+                                <div class="photo-main">
+                                    <img src="/img/Amethyst/geode.png" width="50%" alt="green apple slice">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__info">
+
+                            <div class="title">
+                                <h1>Delicious Apples</h1>
+                                <span>Stock: 1</span>
+                            </div>
+                            <div class="price">
+                                $ <span>7.93</span>
+                            </div>
+
+                            <div class="description">
+                                <h3>Lore</h3>
+                                <p>Lorem3</p>
+                            </div>
+                            <a href="/img/Amethyst/down.docx" download><button class="buy--btn">Read More</button></a>
+                            <button class="buy--btn">Compare</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="card-product" data-modal="m3">
+            <div class="image">
+                <img src="/img/Amethyst/geode.png" width="50%" alt="">
+            </div>
+            <div class="info-product">
+                <h3 class="type">Geode</h3>
+                <h4 class="name">Amethyst Geode</h4>
+                <span>$15</span>
+            </div>
+
+        </div>
+        <div class="modal" id="m3">
+            <div class="modal-content">
+                <div class="x"> <span id="closeBT">&times</span></div>
+
+                <section class="product">
+                    <div class="product__photo">
+                        <div class="photo-container">
+                            <div class="photo-main">
+                                <img src="/img/Amethyst/geode.png" width="50%" alt="green apple slice">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__info">
+
+                        <div class="title">
+                            <h1>Delicious Apples</h1>
+                            <span>Stock: 1</span>
+                        </div>
+                        <div class="price">
+                            $ <span>7.93</span>
+                        </div>
+
+                        <div class="description">
+                            <h3>Lore</h3>
+                            <p>Lorem</p>
+                        </div>
+                        <a href="/img/Amethyst/down.docx" download><button class="buy--btn">Read More</button></a>
+                        <button class="buy--btn">Compare</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <div id="pagination">
+        <a>Pages:</a>
+    </div>
+
+</body>
+<script>
+    const fil = document.querySelector('.filter');
+    const list = document.querySelector('.hide');
+
+    function go() {
+        fil.classList.toggle('active');
+        list.classList.toggle('active')
+    }
+    // Modalshow 
+
+    var cards = document.querySelectorAll('.card-product');
+    var closebuttons = document.querySelectorAll('#closeBT');
+
+    cards.forEach(function(card) {
+        card.addEventListener('click', function() {
+            var modal = card.getAttribute('data-modal');
+            document.getElementById(modal).classList.toggle('active');
+        });
+    })
+
+    closebuttons.forEach(function(closebt) {
+        closebt.addEventListener('click', function() {
+            var modal = (closebt.closest(".modal").style.display = "none")
+        })
+    })
+    window.onclick = function(e) {
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
+        }
+    };
+    var filtr = document.querySelector('#filterr')
+    filtr.addEventListener('click', () => {
+        document.querySelector('.filtr').classList.toggle('active');
+    })
+</script>
+
+</html>

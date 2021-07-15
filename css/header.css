@@ -1,0 +1,193 @@
+.container-header {
+    width: 100vw;
+    height: 10vh;
+    background: transparent;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    position: fixed;
+    z-index: 99;
+}
+
+
+/* Nav-button */
+
+.container-header .menu-button {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.container-header .menu-button:hover span {
+    transition: 0.5s ease-in-out;
+    transform: scaleY(1.3);
+}
+
+.container-header .menu-button .menu-toggle {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container-header .menu-button .menu-toggle .icon {
+    height: 75%;
+    width: 6%;
+    background: #FFCC00;
+    transition: 0.5s ease-in;
+}
+
+.menu-toggle.change .icon:nth-child(1) {
+    transform: rotate(320deg);
+    background: snow;
+}
+
+.menu-toggle.change .icon:nth-child(2) {
+    transform: rotate(225deg);
+    background: snow;
+}
+
+.menu-toggle.change .icon:nth-child(3) {
+    transform: rotate(320deg);
+    background: snow;
+}
+
+.menu-toggle.change .icon:nth-child(4) {
+    transform: rotate(225deg);
+    background: snow;
+}
+
+
+/*  */
+
+
+/*  */
+
+
+/* Menu-show */
+
+.menu-wrap {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -2;
+    background: transparent;
+    top: 0;
+    opacity: 0.5;
+    display: grid;
+    grid-template-columns: repeat(8, 12.5%);
+    overflow-y: hidden;
+}
+
+.menu-wrap.show {
+    z-index: 9;
+    width: 100vw;
+    height: 100vh;
+}
+
+.colum {
+    height: 100vh;
+    border-left: 0.1px solid black;
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+.menu-wrap.show .colum {
+    transition: 1s;
+    transform: translateX(0);
+    background: black;
+    opacity: 1;
+    width: 100%;
+    animation: slide 1s ease;
+}
+
+@keyframes slide {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.bg ul {
+    list-style-type: none;
+    display: none;
+    z-index: 10;
+    transition: 1s ease;
+    animation-delay: 1s;
+}
+
+.bg ul li {
+    color: seashell;
+    font-size: 6em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: 0.2s ease-in;
+    animation-delay: 2s;
+    transition-delay: 2s;
+    animation: slides 3s cubic-bezier(.7, .05, .44, 1.46);
+}
+
+.bg ul a {
+    text-decoration: none;
+}
+
+@keyframes slides {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px)
+    }
+    80% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.bg.show ul {
+    display: block;
+}
+
+.colum1 {
+    width: 50vw;
+}
+
+.bg {
+    width: 100vw;
+    height: 90vh;
+    position: fixed;
+    background: transparent;
+    top: 0;
+    opacity: 0.5;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    overflow: hidden;
+}
+
+.bg.show {
+    z-index: 10;
+}
+
+.container-menu {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bg ul a {
+    opacity: 0.7;
+}
+
+.bg ul a:hover {
+    color: wheat;
+    text-decoration: line-through;
+}
